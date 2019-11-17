@@ -1,0 +1,24 @@
+<header class="div-row" class="col-xs-3 col-sm-12 col-md-12 col-lg-12" class="mx-auto" style="width: 400px;">
+    <div class="container">
+        <h1>Inicia sesion</h1>
+    </div>
+    
+  </header>
+  <div class="container" class="div-row" class="col-xs-3 col-sm-12 col-md-12 col-lg-12" class="mx-auto" style="width: 400px;">
+    <section class="main row">
+      <article class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
+          <form>
+              <label>Nombre</label>
+              <div class="form-group">
+                <input type="text" class="form-control" name="nombre" [(ngModel)]="usuario.nombre" placeholder="Ingresa tu nombre">
+              </div>
+              <label>Contraseña</label>
+              <div class="form-group">
+                <input type="text" class="form-control"  name="contrasenia" [(ngModel)]="usuario.contrasenia" placeholder="Contraseña">
+              </div>
+              <button type="submit" class="btn btn-primary" (click)="loginUsuario()" >Entrar</button>
+            </form>
+      </article> 
+    </section>
+  </div>
+  
