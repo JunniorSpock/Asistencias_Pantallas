@@ -7,16 +7,16 @@
   <div class="container" class="div-row" class="col-xs-3 col-sm-12 col-md-12 col-lg-12" class="mx-auto" style="width: 400px;">
     <section class="main row">
       <article class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
-          <form>
-              <label>Nombre</label>
+          <form #frmLogin="ngForm" (ngSubmit)="loginUsuario(frmLogin)">
+              <label>ID</label>
               <div class="form-group">
-                <input type="text" class="form-control" name="nombre" [(ngModel)]="usuario.nombre" placeholder="Ingresa tu nombre">
+                <input type="text" class="form-control" name="id"  placeholder="Ingresa tu ID" ngModel required>
               </div>
               <label>Contraseña</label>
               <div class="form-group">
-                <input type="text" class="form-control"  name="contrasenia" [(ngModel)]="usuario.contrasenia" placeholder="Contraseña">
+                <input type="password" class="form-control"  name="contraseña" placeholder="Contraseña" ngModel required>
               </div>
-              <button type="submit" class="btn btn-primary" (click)="loginUsuario()" >Entrar</button>
+              <button type="submit" class="btn btn-primary" >Entrar</button>
             </form>
       </article> 
     </section>

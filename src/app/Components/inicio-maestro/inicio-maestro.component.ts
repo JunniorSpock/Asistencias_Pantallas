@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import {Usuario} from '../../models/usuario';
+import { UsuarioService } from 'src/app/servicios/usuario.service';
 @Component({
   selector: 'app-inicio-maestro',
   templateUrl: './inicio-maestro.component.html',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioMaestroComponent implements OnInit {
 
-  constructor() { }
+  constructor(usuario:UsuarioService) { }
 
   ngOnInit() {
   }

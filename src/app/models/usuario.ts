@@ -1,4 +1,4 @@
 export interface Usuario{
-    nombre?: string;
-    contrasenia: string;
+    id?: string;
+    contraseña?: string;
 }

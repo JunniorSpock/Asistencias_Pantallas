@@ -15,7 +15,7 @@ const routes: Routes = [
   component: LoginComponent
 },
 {
-  path: 'hubUsuario',
+  path: 'hubMaestro',
   component: InicioMaestroComponent
 }
 

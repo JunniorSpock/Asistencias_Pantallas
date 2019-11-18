@@ -19,6 +19,7 @@ import { PaseListaComponent } from './Components/pase-lista/pase-lista.component
 import {HttpClientModule} from '@angular/common/http';
 import {UsuarioService} from './servicios/usuario.service'; 
 
+
 @NgModule({
   declarations: [
     AppComponent,
