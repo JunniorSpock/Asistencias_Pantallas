@@ -16,7 +16,13 @@ export class LoginComponent implements OnInit {
 
   loginUsuario(form):void{
    this.usuarioServicio.login(form.value).subscribe(res=>{
-     this.router.navigateByUrl('/hubMaestro')
+    const suadero = this.usuarioServicio.mostrarDatosToken(res);
+    if(suadero.tipo=='maestro'){ 
+      this.router.navigateByUrl('/hubMaestro')
+    }
+    if(suadero.tipo=="alumno"){
+      this.router.navigateByUrl('/hubAlumno')
+    }
    });
   }
 }

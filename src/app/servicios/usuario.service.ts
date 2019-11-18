@@ -29,6 +29,15 @@ export class UsuarioService {
     );
   }
 
+  mostrarDatosToken(tokenCodificado:String){
+      var segments = tokenCodificado.split(".");
+      if (!segments || segments.length !== 3) {
+         throw new Error("Invalid JWT");
+      }
+      var claims = segments[1];
+      return JSON.parse(decodeURIComponent(escape(window.atob(claims))));
+  }
+
 
   private guardarToken(token:string):void{
     localStorage.setItem("ACCESS_TOKEN",token);
