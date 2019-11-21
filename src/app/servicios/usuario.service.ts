@@ -12,7 +12,6 @@ export class UsuarioService {
   API_URI = 'http://localhost:3000';
   authSubject = new BehaviorSubject(false);
   private token: string;
-
   constructor(private http: HttpClient) { }
 
 

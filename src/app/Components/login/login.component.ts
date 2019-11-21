@@ -22,13 +22,14 @@ export class LoginComponent implements OnInit {
       this.usuarioServicio.login(form.value).subscribe(res => {
         const suadero = this.usuarioServicio.mostrarDatosToken(res);
         if (suadero.tipo == 'maestro') {
-          this.flashMessage.show('Ha iniciado sesión como maestro', { cssClass: 'alert-success', timeout: 4000 });
           console.log(suadero);
+          this.flashMessage.show('Ha iniciado sesión como el/la maestro '+suadero.nombre, { cssClass: 'alert-success', timeout: 4000 });
           this.router.navigateByUrl('/hubMaestro');
 
         } else if (suadero.tipo == "alumno") {
-          this.flashMessage.show('Ha iniciado sesión como alumno', { cssClass: 'alert-success', timeout: 4000 });
           console.log(suadero);
+          this.flashMessage.show('Ha iniciado sesión como el/la alumno ' +suadero.nombre, { cssClass: 'alert-success', timeout: 4000 });
+          
           this.router.navigateByUrl('/hubAlumno');
         }
 
@@ -37,7 +38,7 @@ export class LoginComponent implements OnInit {
       });
 
     } catch (err) {
-
+      console.log(err);
     }
   }
 
