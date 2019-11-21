@@ -18,6 +18,8 @@ import { RegistrarAsistenciaComponent } from './Components/registrar-asistencia/
 import { PaseListaComponent } from './Components/pase-lista/pase-lista.component';
 import {HttpClientModule} from '@angular/common/http';
 import {UsuarioService} from './servicios/usuario.service'; 
+import {FlashMessagesModule} from 'angular2-flash-messages';
+import {FlashMessagesService} from 'angular2-flash-messages';
 
 
 @NgModule({
@@ -41,10 +43,11 @@ import {UsuarioService} from './servicios/usuario.service';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    FlashMessagesModule
   ],
   providers: [
-    UsuarioService
+    UsuarioService,FlashMessagesService
   ],
   bootstrap: [AppComponent]
 })

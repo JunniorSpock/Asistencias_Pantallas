@@ -29,7 +29,7 @@ export class UsuarioService {
     );
   }
 
-  mostrarDatosToken(tokenCodificado:String){
+  public mostrarDatosToken(tokenCodificado:String){
       var segments = tokenCodificado.split(".");
       if (!segments || segments.length !== 3) {
          throw new Error("Invalid JWT");
