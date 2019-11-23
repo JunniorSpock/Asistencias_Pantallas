@@ -28,13 +28,17 @@ export class UsuarioService {
     );
   }
 
+
   public mostrarDatosToken(tokenCodificado:String){
+    if(tokenCodificado){
       var segments = tokenCodificado.split(".");
       if (!segments || segments.length !== 3) {
          throw new Error("Invalid JWT");
       }
       var claims = segments[1];
       return JSON.parse(decodeURIComponent(escape(window.atob(claims))));
+    }
+      
   }
 
 
@@ -43,12 +47,14 @@ export class UsuarioService {
     this.token=token;
   }
 
-  private getToken():string{
+  getToken():string{
     if(!this.token){
       this.token=localStorage.getItem("ACCESS_TOKEN");
     }
     return this.token;
   }
 
-
+  private removerToken(){
+    localStorage.removeItem('ACCESS_TOKEN');
+  }
 }

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./reportes-dia.component.css']
 })
 export class ReportesDiaComponent implements OnInit {
-
+  public token =localStorage.getItem('ACCESS_TOKEN');
   constructor() { }
 
   ngOnInit() {

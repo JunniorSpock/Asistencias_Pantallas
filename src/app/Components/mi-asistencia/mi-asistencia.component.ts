@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mi-asistencia.component.css']
 })
 export class MiAsistenciaComponent implements OnInit {
-
+  public token =localStorage.getItem('ACCESS_TOKEN');
   constructor() { }
 
   ngOnInit() {

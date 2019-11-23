@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pase-lista.component.css']
 })
 export class PaseListaComponent implements OnInit {
-
+  public token =localStorage.getItem('ACCESS_TOKEN');
   constructor() { }
 
   ngOnInit() {

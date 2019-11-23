@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
+import {AuthGuard} from './guards/auth.guard'
 import {LoginComponent} from './Components/login/login.component'
 import { InicioMaestroComponent } from './Components/inicio-maestro/inicio-maestro.component';
 import { InicioAlumnoComponent } from './Components/inicio-alumno/inicio-alumno.component';
-
+import { RegistrarAsistenciaComponent } from './Components/registrar-asistencia/registrar-asistencia.component';
 const routes: Routes = [
 {
   path:'',
@@ -17,11 +17,15 @@ const routes: Routes = [
 },
 {
   path: 'hubMaestro',
-  component: InicioMaestroComponent
+  component: InicioMaestroComponent,canActivate:[AuthGuard]
 },
 {
   path: 'hubAlumno',
-  component: InicioAlumnoComponent
+  component: InicioAlumnoComponent,canActivate:[AuthGuard]
+},
+{
+  path: 'regAsist',
+  component: RegistrarAsistenciaComponent
 }
 
 ];

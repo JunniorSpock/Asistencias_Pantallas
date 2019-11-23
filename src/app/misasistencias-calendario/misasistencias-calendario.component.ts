@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./misasistencias-calendario.component.css']
 })
 export class MisasistenciasCalendarioComponent implements OnInit {
-
+  public token =localStorage.getItem('ACCESS_TOKEN');
   constructor() { }
 
   ngOnInit() {

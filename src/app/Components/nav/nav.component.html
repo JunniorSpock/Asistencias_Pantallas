@@ -7,11 +7,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="/">Menu Usuario</a>
+          <a class="nav-link" href="">Menu Usuario</a>
         </li>
-        <li class="nav-item" >
-          <a class="nav-link" href="/">Cerrar Sesión</a>
-        </li>
+        <li>
+        <form (ngSubmit)= "logOut()" >
+          <button type="submit" class="nav-link">Cerrar Sesión</button>
+        </form>
+      </li>
       </ul>
     </div>
 </nav>

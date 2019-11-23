@@ -6,7 +6,7 @@ import {UsuarioService } from '../../servicios/usuario.service';
   styleUrls: ['./reportes-alumnos.component.css']
 })
 export class ReportesAlumnosComponent implements OnInit {
-
+  public token =localStorage.getItem('ACCESS_TOKEN');
   constructor() { }
 
   ngOnInit() {

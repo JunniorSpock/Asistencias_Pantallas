@@ -23,7 +23,11 @@
  
     <div class="div-row" class="mx-auto" style="width:400px;">
         <button type="button" class="btn btn-primary btn-lg col-xs-3 col-sm-12 col-md-12 col-lg-12">Mi asistencia</button>
-        <button type="button" class="btn btn-primary btn-lg col-xs-3 col-sm-12 col-md-12 col-lg-12">Registrar asistencia</button>
+
+        <form (ngSubmit)="comprobarClase()">
+            <button type="submit"  class="btn btn-primary btn-lg col-xs-3 col-sm-12 col-md-12 col-lg-12" >Registrar asistencia</button>
+        </form>
+        
         <button type="button" class="btn btn-primary btn-lg col-xs-3 col-sm-12 col-md-12 col-lg-12">Atras</button>
     </div>
 
