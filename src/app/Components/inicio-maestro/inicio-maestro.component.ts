@@ -11,10 +11,23 @@ export class InicioMaestroComponent implements OnInit {
   constructor(private usuarioServicio:UsuarioService) { }
   public token =localStorage.getItem('ACCESS_TOKEN');
   public suadero= this.usuarioServicio.mostrarDatosToken(this.token);
-  public nombre= this.suadero.nombre;
-  public id= this.suadero.id;
-  public tipo= this.suadero.tipo;
+  public nombre= ''
+  public id= ''
+  public tipo= ''
+
   ngOnInit() {
+    this.getDatos();
   }
+
+
+  getDatos():void{
+    if(this.suadero){
+     this.nombre= this.suadero.nombre;
+     this.id=this.suadero.id;
+     this.tipo=this.suadero.tipo;
+    }
+  }
+
+  
 
 }
